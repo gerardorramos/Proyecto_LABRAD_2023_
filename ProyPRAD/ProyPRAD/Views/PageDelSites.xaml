@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyPRAD.Views.PageDelSites">
+    <ContentPage.Content>
+        <StackLayout Margin="10,0,10,0"  BackgroundColor="AliceBlue">
+            <Label Text="Eliminar Sitios" HorizontalTextAlignment="Center" TextColor="Black" FontSize="24"/>
+
+            <Image Source="ucenm.png"
+                   Aspect="AspectFill"
+                   HorizontalOptions="Center"
+                   Margin="85,15,85,10"/>
+
+            <Label Text="Escribe el Id del sitio a eliminar"
+                       HorizontalOptions="Start"
+                       FontSize="20"
+                       TextColor="Black"
+                       Margin="30,0,10,0"/>
+
+            <Entry Keyboard="Numeric"
+                       x:Name="id"
+                       
+                       Margin="30,0,30,0"
+                       TextColor="Black"
+                   MaxLength="2"
+                       BackgroundColor="Wheat"/>
+
+            <Button Text="Eliminar" 
+                    x:Name="btnEliminar"
+                    Margin="115,5,115,5"
+                    Font="large" 
+                    BorderWidth="2"
+                    VerticalOptions="Center"
+                    BackgroundColor="Red"
+                    Clicked="btnEliminar_Clicked"/>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

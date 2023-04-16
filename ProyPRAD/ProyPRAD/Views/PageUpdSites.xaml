@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyPRAD.Views.PageUpdSites">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="10,0,10,0"  BackgroundColor="AliceBlue">
+
+                <Label Text="Actualizar Sitios" HorizontalTextAlignment="Center" TextColor="Black" FontSize="24"/>
+
+                <Image Source="ucenm.png"
+                   Aspect="AspectFill"
+                   HorizontalOptions="Center"
+                   Margin="85,15,85,10"/>
+
+                <Image x:Name="Foto" 
+                       BackgroundColor="Wheat"
+                       WidthRequest="100" 
+                       HeightRequest="200"
+                       Margin="10,5,10,5"/>
+
+            <Button x:Name="btnfoto" 
+                        Text="Tomar Foto" 
+                        
+                        Clicked="btnfoto_Clicked" 
+                        VerticalOptions="Center"
+                        BackgroundColor="Green"
+                        BorderColor="Black"
+                        Margin="60,5,60,10" />
+
+            <Label Text="Id"
+                   HorizontalOptions="Start"
+                   FontSize="20"
+                   TextColor="Black"
+                   Margin="10,5,10,5"/>
+
+            <Entry Keyboard="Numeric"
+                   Placeholder="Codigo"
+                   TextColor="Black"
+                   Margin="10,5,10,5"
+                   BackgroundColor="Wheat"
+                   WidthRequest="0" HeightRequest="50"
+                   IsSpellCheckEnabled="True"
+                   IsTextPredictionEnabled="True"
+                   
+                   x:Name="Id"/>
+
+            <Label Text="Nombre del sitio"
+                       FontSize="20"
+                       HorizontalOptions="Start"
+                       TextColor="Black"
+                       Margin="10,5,10,5"/>
+
+            <Entry Keyboard="Text"
+                       Placeholder="Nombre del sitio"
+                       Margin="10,5,10,5"
+                       BackgroundColor="Wheat"
+                       TextColor="Black"
+                       WidthRequest="0" HeightRequest="50"
+                       IsSpellCheckEnabled="True"
+                       IsTextPredictionEnabled="True"
+                       
+                       x:Name="nombre_sitio"/>
+
+
+            <Label Text="Latitud"
+                       FontSize="20"
+                       HorizontalOptions="Start"
+                       TextColor="Black"
+                       Margin="10,5,10,5"/>
+
+            <Entry Keyboard="Numeric"
+                       Margin="10,5,10,5"
+                       BackgroundColor="Wheat"
+                       TextColor="Black"
+                       WidthRequest="0" 
+                       HeightRequest="50"
+                       IsSpellCheckEnabled="True"
+                       IsTextPredictionEnabled="True"
+                       MaxLength="10"
+                       Placeholder="Latitud"
+                    
+                       x:Name="latitud"/>
+
+            <Label Text="Longitud"
+                       FontSize="20"
+                       HorizontalOptions="Start"
+                       TextColor="Black"
+                       Margin="10,5,10,5"/>
+
+            <Entry Keyboard="Numeric"
+                       Margin="10,5,10,5"
+                       BackgroundColor="Wheat"
+                       TextColor="Black"
+                       WidthRequest="0" 
+                       HeightRequest="50"
+                       IsSpellCheckEnabled="True"
+                       IsTextPredictionEnabled="True"
+                       MaxLength="10"
+                       Placeholder="Longitud"
+                    
+                       x:Name="longitud"/>
+                
+                <Label Text="País" TextColor="Black" HorizontalTextAlignment="Start" FontSize="20" Margin="10,5,10,5"/>
+                
+                <Picker 
+                        x:Name="pais"                      
+                        
+                        BackgroundColor="Wheat"
+                        FontSize="20"
+                        Margin="10,5,10,5">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Honduras (504)</x:String>
+                        <x:String>Costa Rica(506)</x:String>
+                        <x:String>Guatemala(502)</x:String>
+                        <x:String>El salvador(503)</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text="Nota"
+                       FontSize="20"
+                       HorizontalOptions="Start"
+                       TextColor="Black"
+                       Margin="10,5,10,5"/>
+
+            <Entry Keyboard="Text"
+                       Placeholder="Nota"
+                       Margin="10,5,10,5"
+                       BackgroundColor="Wheat"
+                       TextColor="Black"
+                       WidthRequest="0" 
+                       HeightRequest="50"
+                   MaxLength="100"
+                       IsSpellCheckEnabled="True"
+                       IsTextPredictionEnabled="True"
+                       
+                       x:Name="nota"/>
+
+            <Button x:Name="btnAgregar" 
+                        TextColor="Black"
+                        BackgroundColor="Yellow"
+                        BorderColor="Black"
+                        BorderWidth="3"
+                        Margin="5,5,5,5"
+                        CornerRadius="1"
+                        WidthRequest="0"
+                        HeightRequest="60"
+                        Text="Actualizar Sitio" 
+                        VerticalOptions="Center"
+                        Clicked="btnAgregar_Clicked"/>
+
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

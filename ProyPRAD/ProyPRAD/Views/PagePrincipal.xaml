@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyPRAD.Views.PagePrincipal">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="White">
+                
+                <Image x:Name="foto" WidthRequest="1080" HeightRequest="120" Source="ucenm.png" HorizontalOptions="Center" 
+                
+                       Aspect="AspectFill"
+                       
+                       Margin="50,5,50,5"/>
+                
+                <Label Text="Contactos"
+                       TextColor="Black"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Start"/>
+                
+                <ImageButton x:Name="btn_contacts"
+                         Source="clogo.png"
+                         HorizontalOptions="Center"
+                             BackgroundColor="White"
+                         VerticalOptions="Center"
+                         Margin="100,0,100,5"
+                         Clicked="btn_contacts_Clicked"/>
+                
+                <Button x:Name="btn_AddContacto"
+                        Text="Agregar Contacto"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        TextColor="White"
+                        BackgroundColor="Green"
+                        Clicked="btn_AddContacto_Clicked"/>
+                
+                <Label  Text="Sitios"
+                        TextColor="Black"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Start"
+                        Margin="10,50,10,1"/>
+                
+                <ImageButton x:Name="btn_places"
+                         Source="location.jpg" 
+                             
+                         HorizontalOptions="Center" 
+                         VerticalOptions="Center"
+                         Margin="100,5,100,5"
+                         Clicked="btn_places_Clicked"/>
+                
+                <Button x:Name="btn_AddSitio"
+                        Text="Agregar Sitio"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Start"
+                        BackgroundColor="HotPink"
+                        TextColor="White"
+                        Margin="50,10,50,5"
+                        Clicked="btn_AddSitio_Clicked"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

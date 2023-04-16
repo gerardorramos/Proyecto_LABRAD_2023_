@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="ProyPRAD.Views.ListaSitios">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <xct:ByteArrayToImageSourceConverter x:Key="ByteArrayToImageSourceConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout Margin="10,0,10,0"  BackgroundColor="AliceBlue">
+
+            <Label Text="Lista de Sitios" HorizontalTextAlignment="Center" TextColor="Black" FontSize="24"/>
+
+            <Image Source="ucenm.png"
+                   Aspect="AspectFill"
+                   HorizontalOptions="Center"
+                   Margin="85,15,85,10"/>
+
+
+
+
+            <CollectionView x:Name="listasitios"
+                            Margin="20"
+                            SelectionMode="Single"
+                            SelectionChanged="listasitios_SelectionChanged">
+
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical"
+                                      ItemSpacing="10" />
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout BackgroundColor="LightBlue">
+
+                            <Label Text="{Binding Id}" TextColor="Black" />
+
+                            <Image 
+                                   HeightRequest="250"
+                                   WidthRequest="280"
+                                   Source="{Binding Foto,Converter={StaticResource ByteArrayToImageSourceConverter}}"
+                                   HorizontalOptions="Start"
+                                   Aspect="AspectFit"/>
+
+                            <Label Text="{Binding Nombre_sitio}" TextColor="Black"/>
+
+                            <Label Text="{Binding Latitud}" TextColor="Black"/>
+
+                            <Label Text="{Binding Longitud}" TextColor="Black" />
+
+                            <Label Text="{Binding Pais}" TextColor="Black"/>
+
+                            <Label Text="{Binding Nota}" TextColor="Black"/>
+
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+
+            </CollectionView>
+            <Button Text="Actualizar Sitio"
+                    x:Name="btnActualizar"
+                    Margin="10,10,200,-63"
+                    BackgroundColor="Yellow"
+                    TextColor="Black"
+                Clicked="btnActualizar_Clicked"/>
+
+            <Button Text="Eliminar Sitio"
+                     x:Name="btnEliminar"
+                    Margin="200,10,10,10"
+                    BackgroundColor="red"
+                Clicked="btnEliminar_Clicked"/>
+
+            <Button Text="Ver mapa"
+                     x:Name="btnvermapa"
+                    Margin="115,5,115,5"
+                    BackgroundColor="ForestGreen"
+                    Clicked="btnvermapa_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
